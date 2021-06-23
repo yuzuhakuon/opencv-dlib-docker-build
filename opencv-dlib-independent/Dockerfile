@@ -94,7 +94,7 @@ RUN echo "Dlib: ${DLIB_VERSION}" \
     && cp /dlib/dlib/*.txt $LIB_PREFIX/include/dlib/ \
     && cd / \
     && rm -rf /dlib \
-    && mkdir /home/module \
+    && mkdir -p /home/models \
     && cd /home/models \
     && wget http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2 \
     && bzip2 -d shape_predictor_68_face_landmarks.dat.bz2 \
