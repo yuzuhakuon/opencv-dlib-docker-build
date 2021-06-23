@@ -1,8 +1,8 @@
-name: CI to Docker hub 
+name: CI to Docker hub 2
 
 on:
   push:
-    branches: [ main ]
+    branches: [ independent ]
 # 任务
 jobs:
   build-and-deploy:
@@ -24,6 +24,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: ./
-          file: ./Dockerfile
+          file: ./opencv-dlib-independent/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/opencv-dlib:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/opencv-dlib:independent-latest
