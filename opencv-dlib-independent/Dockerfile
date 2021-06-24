@@ -75,6 +75,7 @@ RUN echo "Dlib: ${DLIB_VERSION}" \
     && wget -q https://github.com/davisking/dlib/archive/v${DLIB_VERSION}.zip -O dlib.zip \
     && dlib_cmake_flags="-D CMAKE_BUILD_TYPE=RELEASE \
     -D CMAKE_INSTALL_PREFIX=$LIB_PREFIX \
+    -D BUILD_SHARED_LIBS=ON \
     -D DLIB_NO_GUI_SUPPORT=OFF \
     -D DLIB_USE_BLAS=ON \
     -D DLIB_GIF_SUPPORT=ON \
